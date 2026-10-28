@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Construcciones AO | Arquitectura & Construcción Sustentable Cajón del Maipo</title>
+  <meta name="description" content="Ingeniería en Obras Civiles y Edificación Sustentable en San José de Maipo, Pirque, Puente Alto y La Florida. Cabañas alpinas, terrazas, decks y cumplimiento estricto Ley 21.719." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+
+  <!-- Google Fonts: Merriweather + Plus Jakarta Sans + Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#012d1d",
+            "primary-container": "#1b4332",
+            "forest-deep": "#1B4332",
+            "forest-medium": "#2D6A4F",
+            secondary: "#8b4f29",
+            "secondary-fixed": "#ffdbc9",
+            terracotta: "#C07A50",
+            "warm-wood": "#8B5E3C",
+            background: "#fbf9f6",
+            "canvas-cream": "#FAF8F5",
+            surface: "#fbf9f6",
+            "surface-container": "#efeeeb",
+            "surface-container-low": "#f5f3f0",
+            "surface-container-high": "#eae8e5",
+            "stone-sand": "#EAE0D5",
+            "slate-dark": "#1E293B",
+            "slate-muted": "#334155",
+            "on-surface": "#1b1c1a",
+            "google-gold": "#F59E0B",
+            "whatsapp-green": "#25D366"
+          },
+          fontFamily: {
+            serif: ["Merriweather", "serif"],
+            sans: ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #arcoReceiptModal, #arcoReceiptModal * {
+        visibility: visible;
+      }
+      #arcoReceiptModal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: white !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-sans antialiased selection:bg-terracotta selection:text-white">
+
+  <!-- ========================================== -->
+  <!-- TOPBAR: INFORMACIÓN Y CONTACTO RÁPIDO      -->
+  <!-- ========================================== -->
+  <div class="bg-primary text-white text-xs py-2 px-4 border-b border-primary-container">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-terracotta animate-pulse"></span>
+        <span class="font-medium tracking-wide" data-i18n="topbar_zones">Edificación Sustentable en San José de Maipo, Pirque, Puente Alto y La Florida</span>
+      </div>
+      <div class="flex items-center gap-4 text-stone-200">
+        <a href="tel:+56979925812" class="flex items-center gap-1 hover:text-white transition-colors">
+          <span class="material-symbols-outlined text-[15px]">call</span>
+          <span>+56 9 7992 5812</span>
+        </a>
+        <span class="text-stone-400">|</span>
+        <a href="mailto:construyeao@gmail.com" class="flex items-center gap-1 hover:text-white transition-colors">
+          <span class="material-symbols-outlined text-[15px]">mail</span>
+          <span>construyeao@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- NAVBAR PRINCIPAL                           -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-40 bg-canvas-cream/95 backdrop-blur-md shadow-sm border-b border-stone-sand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo y Razón Social -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="assets/img/logo.png" alt="Construcciones AO Logo" class="h-12 w-auto object-contain rounded transition-transform group-hover:scale-105" />
+        <div class="flex flex-col">
+          <span class="font-serif font-bold text-xl text-primary leading-tight">Construcciones AO</span>
+          <span class="text-xs uppercase tracking-widest text-secondary font-semibold" data-i18n="brand_sub">Cajón del Maipo</span>
+        </div>
+      </a>
+
+      <!-- Navegación Desktop -->
+      <nav class="hidden lg:flex items-center gap-6 font-medium text-sm text-slate-muted">
+        <a href="#" class="text-primary font-bold hover:text-terracotta transition-colors" data-i18n="nav_home">Inicio</a>
+        <a href="#servicios" class="hover:text-primary transition-colors" data-i18n="nav_services">Servicios</a>
+        <a href="#metodologia" class="hover:text-primary transition-colors" data-i18n="nav_process">Metodología</a>
+        <a href="#cotizador" class="hover:text-primary transition-colors" data-i18n="nav_portfolio">Cotizador</a>
+        <a href="#cumplimiento" class="hover:text-primary transition-colors flex items-center gap-1 text-forest-medium font-semibold">
+          <span class="material-symbols-outlined text-[18px]">verified_user</span>
+          <span data-i18n="nav_privacy">Ley 21.719 / Privacidad</span>
+        </a>
+        <a href="#contacto" class="hover:text-primary transition-colors" data-i18n="nav_contact">Contacto</a>
+      </nav>
+
+      <!-- Selector de Idioma & Botones de Acción -->
+      <div class="flex items-center gap-3">
+        <!-- Selector i18n -->
+        <div class="relative inline-block text-left">
+          <select id="langSelector" class="bg-surface-container border border-stone-sand text-slate-dark text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-forest-deep cursor-pointer font-medium" aria-label="Seleccionar idioma">
+            <option value="es">🇨🇱 Español</option>
+            <option value="pt">🇧🇷 Português</option>
+            <option value="en">🇺🇸 English</option>
+          </select>
+        </div>
+
+        <!-- WhatsApp CTA -->
+        <a href="https://wa.me/56979925812?text=Hola%20Construcciones%20AO%2C%20quisiera%20solicitar%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 bg-whatsapp-green text-white px-3.5 py-2 rounded-lg text-xs font-semibold shadow hover:bg-emerald-600 transition-colors">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span>WhatsApp</span>
+        </a>
+
+        <!-- Botón Menú Móvil -->
+        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-slate-dark hover:bg-surface-container" aria-label="Abrir menú">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú Móvil Desplegable -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-stone-sand bg-canvas-cream px-4 pt-3 pb-6 space-y-3 font-medium text-slate-dark">
+      <a href="#" class="block py-2 text-primary font-bold" data-i18n="nav_home">Inicio</a>
+      <a href="#servicios" class="block py-2 hover:text-terracotta" data-i18n="nav_services">Servicios</a>
+      <a href="#metodologia" class="block py-2 hover:text-terracotta" data-i18n="nav_process">Metodología</a>
+      <a href="#cotizador" class="block py-2 hover:text-terracotta" data-i18n="nav_portfolio">Cotizador</a>
+      <a href="#cumplimiento" class="block py-2 hover:text-terracotta" data-i18n="nav_privacy">Ley 21.719 / Privacidad</a>
+      <a href="#contacto" class="block py-2 hover:text-terracotta" data-i18n="nav_contact">Contacto</a>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- HERO SECTION                               -->
+  <!-- ========================================== -->
+  <section class="relative bg-primary text-white overflow-hidden min-h-[640px] flex items-center">
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay" style="background-image: url('assets/img/hero-bg.png');"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl space-y-6">
+        
+        <!-- Eyebrow Pill -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-secondary-fixed text-xs tracking-wider uppercase font-semibold">
+          <span class="w-2 h-2 rounded-full bg-terracotta"></span>
+          <span data-i18n="hero_pill">Construcción Sustentable · Cajón del Maipo · Pirque · Cordillera</span>
+        </div>
+
+        <!-- H1 Titular -->
+        <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+          <span data-i18n="hero_title">Constructora en Cajón del Maipo con</span>
+          <span class="text-secondary-fixed italic" data-i18n="hero_title_highlight">calidad garantizada</span>
+        </h1>
+
+        <!-- Bajada -->
+        <p class="text-base sm:text-lg text-stone-200 leading-relaxed max-w-2xl" data-i18n="hero_subtitle">
+          Sueña en familia. Ampliaciones, remodelaciones y obra nueva con conciencia sustentable, respeto ecológico andino y terminaciones de autor preparadas para resistir generaciones.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center gap-4 pt-4">
+          <a href="#cotizador" class="inline-flex items-center gap-2 bg-terracotta hover:bg-secondary text-white font-semibold px-6 py-3.5 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
+            <span data-i18n="hero_btn_quote">Solicita tu Cotización</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+          <a href="#servicios" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-3.5 rounded-lg backdrop-blur-md transition-colors">
+            <span class="material-symbols-outlined text-[18px]">foundation</span>
+            <span data-i18n="hero_btn_services">Explorar Servicios</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Trust Metrics Bar -->
+      <div class="mt-14 pt-8 border-t border-white/15 grid grid-cols-2 lg:grid-cols-4 gap-6 text-white">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-lg bg-google-gold/20 flex items-center justify-center text-google-gold shrink-0">
+            <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <div>
+            <div class="flex items-baseline gap-1">
+              <span class="font-serif font-bold text-2xl" data-i18n="stat_google_score">5.0</span>
+              <span class="text-xs text-google-gold font-bold" data-i18n="stat_google_label">★ Google</span>
+            </div>
+            <p class="text-xs text-stone-300" data-i18n="stat_google_desc">Calificación 100% verificada</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+            <span class="material-symbols-outlined text-3xl">verified</span>
+          </div>
+          <div>
+            <span class="font-serif font-bold text-2xl" data-i18n="stat_years_score">15</span>
+            <p class="text-xs text-stone-300" data-i18n="stat_years_desc">Años de trayectoria andina</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-lg bg-terracotta/20 flex items-center justify-center text-terracotta shrink-0">
+            <span class="material-symbols-outlined text-3xl">cottage</span>
+          </div>
+          <div>
+            <span class="font-serif font-bold text-2xl" data-i18n="stat_works_score">200+</span>
+            <p class="text-xs text-stone-300" data-i18n="stat_works_desc">Obras & refugios entregados</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-lg bg-white/15 flex items-center justify-center text-white shrink-0">
+            <span class="material-symbols-outlined text-3xl">handshake</span>
+          </div>
+          <div>
+            <span class="font-serif font-bold text-2xl" data-i18n="stat_trust_score">100%</span>
+            <p class="text-xs text-stone-300" data-i18n="stat_trust_desc">Compromiso & trato familiar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECCIÓN: SERVICIOS                         -->
+  <!-- ========================================== -->
+  <section id="servicios" class="py-20 bg-canvas-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-secondary text-xs uppercase tracking-widest font-bold block mb-2" data-i18n="services_eyebrow">Especialidades Cordilleranas</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-primary mb-4" data-i18n="services_title">Soluciones de Ingeniería y Arquitectura de Alta Montaña</h2>
+        <p class="text-slate-muted text-base" data-i18n="services_subtitle">Dominamos el terreno escarpado, la climatología andina y los materiales nobles para construir proyectos duraderos y eficientes.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Servicio 1 -->
+        <div class="bg-white p-6 rounded-xl border border-stone-sand shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-3xl">cabin</span>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-primary mb-2" data-i18n="srv1_title">Cabañas Alpinas & Casas Sustentables</h3>
+          <p class="text-slate-muted text-sm leading-relaxed" data-i18n="srv1_desc">Diseño y edificación bioclimática con alta eficiencia térmica, grandes ventanales y maderas nativas certificadas.</p>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="bg-white p-6 rounded-xl border border-stone-sand shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-lg bg-terracotta/10 text-terracotta flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-3xl">home_repair_service</span>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-primary mb-2" data-i18n="srv2_title">Ampliaciones y Remodelaciones Integrales</h3>
+          <p class="text-slate-muted text-sm leading-relaxed" data-i18n="srv2_desc">Modernización de espacios residenciales respetando la identidad arquitectónica existente y optimizando la luz natural.</p>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="bg-white p-6 rounded-xl border border-stone-sand shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-lg bg-warm-wood/10 text-warm-wood flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-3xl">deck</span>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-primary mb-2" data-i18n="srv3_title">Terrazas, Decks & Quinchos de Cordillera</h3>
+          <p class="text-slate-muted text-sm leading-relaxed" data-i18n="srv3_desc">Espacios de esparcimiento exterior construidos en madera tratada, piedra rústica y estructuras metálicas de alta resistencia.</p>
+        </div>
+
+        <!-- Servicio 4 -->
+        <div class="bg-white p-6 rounded-xl border border-stone-sand shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-lg bg-forest-deep/10 text-forest-deep flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-3xl">engineering</span>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-primary mb-2" data-i18n="srv4_title">Obras Civiles & Muros de Contención</h3>
+          <p class="text-slate-muted text-sm leading-relaxed" data-i18n="srv4_desc">Ingeniería de suelos, contención de taludes, fundaciones antisísmicas y drenajes adaptados a la geografía del Cajón del Maipo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECCIÓN: METODOLOGÍA                       -->
+  <!-- ========================================== -->
+  <section id="metodologia" class="py-20 bg-surface-container-low border-y border-stone-sand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-secondary text-xs uppercase tracking-widest font-bold block mb-2" data-i18n="process_eyebrow">Metodología Paso a Paso</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-primary" data-i18n="process_title">Construcción transparente y sin sorpresas</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-xl border border-stone-sand">
+          <span class="text-4xl font-serif font-bold text-stone-300 block mb-2">01</span>
+          <h4 class="font-serif font-bold text-base text-primary mb-2" data-i18n="step1_title">1. Visita Técnica en Terreno</h4>
+          <p class="text-xs text-slate-muted leading-relaxed" data-i18n="step1_desc">Evaluamos pendientes, accesos, mecánica de suelo y orientación solar directamente en su terreno.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-stone-sand">
+          <span class="text-4xl font-serif font-bold text-stone-300 block mb-2">02</span>
+          <h4 class="font-serif font-bold text-base text-primary mb-2" data-i18n="step2_title">2. Diseño & Presupuesto Desglosado</h4>
+          <p class="text-xs text-slate-muted leading-relaxed" data-i18n="step2_desc">Planos de arquitectura, especificaciones técnicas y cubicación exacta de materiales sin costos ocultos.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-stone-sand">
+          <span class="text-4xl font-serif font-bold text-stone-300 block mb-2">03</span>
+          <h4 class="font-serif font-bold text-base text-primary mb-2" data-i18n="step3_title">3. Ejecución con Hitos Programados</h4>
+          <p class="text-xs text-slate-muted leading-relaxed" data-i18n="step3_desc">Construcción por etapas con supervisión constante de ingenieros y reportes fotográficos periódicos.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-stone-sand">
+          <span class="text-4xl font-serif font-bold text-stone-300 block mb-2">04</span>
+          <h4 class="font-serif font-bold text-base text-primary mb-2" data-i18n="step4_title">4. Entrega Llave en Mano & Garantía</h4>
+          <p class="text-xs text-slate-muted leading-relaxed" data-i18n="step4_desc">Recepción conforme con el cliente y acompañamiento post-entrega garantizado formalmente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECCIÓN: COTIZADOR INTERACTIVO             -->
+  <!-- ========================================== -->
+  <section id="cotizador" class="py-20 bg-canvas-cream">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="text-terracotta text-xs uppercase tracking-widest font-bold block mb-2" data-i18n="calc_eyebrow">Estimador en Línea</span>
+        <h2 class="font-serif text-3xl font-bold text-primary mb-2" data-i18n="calc_title">Cotizador de Obras y Proyectos</h2>
+        <p class="text-slate-muted text-sm" data-i18n="calc_subtitle">Calcula un valor referencial para tu proyecto en menos de 1 minuto.</p>
+      </div>
+
+      <div class="bg-white p-6 sm:p-8 rounded-2xl border border-stone-sand shadow-lg space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          
+          <!-- Tipo de Proyecto -->
+          <div>
+            <label class="block text-xs font-bold text-primary uppercase tracking-wider mb-2" data-i18n="calc_type_label">Tipo de Proyecto</label>
+            <select id="calcProjectType" class="w-full bg-surface-container border border-stone-sand rounded-lg px-3 py-2.5 text-sm text-slate-dark focus:ring-2 focus:ring-forest-deep focus:outline-none">
+              <option value="cabana" data-i18n="calc_opt_cabin">Cabaña o Casa Sustentable</option>
+              <option value="ampliacion" data-i18n="calc_opt_extension">Ampliación o Remodelación</option>
+              <option value="deck" data-i18n="calc_opt_deck">Terraza Deck o Quincho</option>
+              <option value="civil" data-i18n="calc_opt_civil">Muro de Contención u Obra Civil</option>
+            </select>
+          </div>
+
+          <!-- Ubicación -->
+          <div>
+            <label class="block text-xs font-bold text-primary uppercase tracking-wider mb-2" data-i18n="calc_zone_label">Ubicación del Terreno</label>
+            <select id="calcZone" class="w-full bg-surface-container border border-stone-sand rounded-lg px-3 py-2.5 text-sm text-slate-dark focus:ring-2 focus:ring-forest-deep focus:outline-none">
+              <option value="sjm" data-i18n="calc_zone_sjm">San José de Maipo / Cajón del Maipo</option>
+              <option value="pirque" data-i18n="calc_zone_pirque">Pirque / El Principal</option>
+              <option value="puente_alto" data-i18n="calc_zone_pa">Puente Alto (Precordillera)</option>
+              <option value="la_florida" data-i18n="calc_zone_florida">La Florida (Precordillera)</option>
+            </select>
+          </div>
+
+          <!-- Superficie Slider -->
+          <div class="sm:col-span-2">
+            <div class="flex justify-between items-center mb-2">
+              <label class="text-xs font-bold text-primary uppercase tracking-wider" data-i18n="calc_area_label">Superficie Estimada (m²)</label>
+              <span id="calcAreaValue" class="text-sm font-bold text-terracotta bg-terracotta/10 px-2.5 py-0.5 rounded-full">50 m²</span>
+            </div>
+            <input id="calcArea" type="range" min="15" max="300" value="50" step="5" class="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-terracotta" />
+            <div class="flex justify-between text-[11px] text-slate-muted mt-1">
+              <span>15 m²</span>
+              <span>150 m²</span>
+              <span>300 m²</span>
+            </div>
+          </div>
+
+          <!-- Línea de Materialidad -->
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-bold text-primary uppercase tracking-wider mb-2" data-i18n="calc_material_label">Línea de Materiales</label>
+            <select id="calcMaterial" class="w-full bg-surface-container border border-stone-sand rounded-lg px-3 py-2.5 text-sm text-slate-dark focus:ring-2 focus:ring-forest-deep focus:outline-none">
+              <option value="standard" data-i18n="calc_mat_standard">Estándar Eficiente (Pino impregnado, Metalcon)</option>
+              <option value="premium" data-i18n="calc_mat_premium">Premium Andino (Roble, Piedra, Termopanel)</option>
+              <option value="rustic" data-i18n="calc_mat_rustic">Rústico Tradicional</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Caja de Resultados -->
+        <div class="bg-forest-deep text-white p-6 rounded-xl text-center space-y-2 mt-6">
+          <span class="text-xs uppercase tracking-widest text-emerald-300 font-semibold" data-i18n="calc_result_title">Rango Estimado de Inversión</span>
+          <div id="calcResultUF" class="font-serif text-2xl sm:text-3xl font-bold text-white tracking-tight">1,000 - 1,400 UF</div>
+          <div id="calcResultCLP" class="text-sm text-stone-300 font-medium">$38.000.000 - $53.200.000 CLP</div>
+          <p class="text-[11px] text-stone-400 pt-2 border-t border-white/10" data-i18n="calc_result_disclaimer">*Los valores son referenciales e incluyen materiales certificados y mano de obra técnica. Sujeto a visita en terreno.</p>
+        </div>
+
+        <!-- Acciones del Cotizador -->
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <button id="calcBtnWhatsapp" class="flex-1 inline-flex items-center justify-center gap-2 bg-whatsapp-green hover:bg-emerald-600 text-white font-semibold py-3 px-4 rounded-lg text-sm transition-colors shadow">
+            <span class="material-symbols-outlined text-[18px]">chat</span>
+            <span data-i18n="calc_btn_whatsapp">Cotizar formalmente por WhatsApp</span>
+          </button>
+          <a href="#contacto" class="inline-flex items-center justify-center gap-2 bg-surface-container hover:bg-surface-container-high text-primary font-semibold py-3 px-4 rounded-lg text-sm border border-stone-sand transition-colors">
+            <span class="material-symbols-outlined text-[18px]">mail</span>
+            <span data-i18n="calc_btn_form">Enviar a Revisión de Ingeniería</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- SECCIÓN MAESTRA: CUMPLIMIENTO LEY 21.719 Y GOBERNANZA DE DATOS -->
+  <!-- ============================================================== -->
+  <section id="cumplimiento" class="py-20 bg-white border-t border-stone-sand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Encabezado Cumplimiento -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-deep/10 text-forest-deep text-xs font-bold uppercase tracking-wider mb-3">
+          <span class="material-symbols-outlined text-[16px]">verified_user</span>
+          <span data-i18n="legal_badge">Cumplimiento Ley N° 21.719</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-primary mb-4" data-i18n="legal_title">Transparencia, Gobernanza y Protección de Datos</h2>
+        <p class="text-slate-muted text-sm sm:text-base leading-relaxed" data-i18n="legal_subtitle">
+          En Construcciones AO implementamos un estándar de seguridad y privacidad conforme a las 4 fases de adecuación de la nueva Ley 21.719 de Chile.
+        </p>
+      </div>
+
+      <!-- Grid de las 4 Fases Operativas -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        
+        <!-- Fase 1 -->
+        <div class="p-6 rounded-xl bg-surface-container-low border border-stone-sand flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3">
+              <span class="material-symbols-outlined text-2xl">policy</span>
+            </div>
+            <h3 class="font-serif font-bold text-base text-primary mb-2" data-i18n="phase1_title">Fase 1: Diagnóstico & Licitud</h3>
+            <p class="text-xs text-slate-muted leading-relaxed" data-i18n="phase1_desc">Registro e inventario de tratamientos conforme al Art. 14 ter. Clasificación estricta de datos de contacto y cotización sin recopilación de datos sensibles.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-sand/60 text-[11px] text-terracotta font-semibold">Sprints 1-2 · Auditoría Finalizada</div>
+        </div>
+
+        <!-- Fase 2 -->
+        <div class="p-6 rounded-xl bg-surface-container-low border border-stone-sand flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-terracotta/10 text-terracotta flex items-center justify-center mb-3">
+              <span class="material-symbols-outlined text-2xl">cookie</span>
+            </div>
+            <h3 class="font-serif font-bold text-base text-primary mb-2" data-i18n="phase2_title">Fase 2: Rediseño & Consentimiento CMP</h3>
+            <p class="text-xs text-slate-muted leading-relaxed" data-i18n="phase2_desc">Formularios sin casillas premarcadas. Gestor de cookies que bloquea scripts de analítica hasta obtener tu consentimiento afirmativo.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-sand/60 text-[11px] text-terracotta font-semibold">Sprints 3-4 · CMP Operativo</div>
+        </div>
+
+        <!-- Fase 3 -->
+        <div class="p-6 rounded-xl bg-surface-container-low border border-stone-sand flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-forest-medium/10 text-forest-medium flex items-center justify-center mb-3">
+              <span class="material-symbols-outlined text-2xl">security</span>
+            </div>
+            <h3 class="font-serif font-bold text-base text-primary mb-2" data-i18n="phase3_title">Fase 3: Canal ARCO+ & Cifrado</h3>
+            <p class="text-xs text-slate-muted leading-relaxed" data-i18n="phase3_desc">Ejercicio de derechos de Acceso, Rectificación, Cancelación, Oposición, Portabilidad y Bloqueo Temporal (atención prioritaria en 2 días hábiles).</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-sand/60 text-[11px] text-terracotta font-semibold">Sprints 5-6 · Canal Cifrado Activo</div>
+        </div>
+
+        <!-- Fase 4 -->
+        <div class="p-6 rounded-xl bg-surface-container-low border border-stone-sand flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center mb-3">
+              <span class="material-symbols-outlined text-2xl">badge</span>
+            </div>
+            <h3 class="font-serif font-bold text-base text-primary mb-2" data-i18n="phase4_title">Fase 4: DPD & Certificación</h3>
+            <p class="text-xs text-slate-muted leading-relaxed" data-i18n="phase4_desc">Delegado de Protección de Datos (DPD) designado y modelo de prevención de infracciones ante la futura Agencia de Protección de Datos.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-sand/60 text-[11px] text-terracotta font-semibold">Sprints 7-8 · Gobernanza Continua</div>
+        </div>
+
+      </div>
+
+      <!-- Botones de Acción Legal -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
+        <button data-action="open-arco" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-container text-white font-semibold py-3 px-6 rounded-lg text-sm shadow transition-colors">
+          <span class="material-symbols-outlined text-[18px]">gavel</span>
+          <span data-i18n="legal_btn_arco">Ejercer Derechos ARCO+</span>
+        </button>
+        <button data-action="open-privacy" class="inline-flex items-center gap-2 bg-surface-container hover:bg-surface-container-high text-primary font-semibold py-3 px-6 rounded-lg text-sm border border-stone-sand transition-colors">
+          <span class="material-symbols-outlined text-[18px]">description</span>
+          <span data-i18n="legal_btn_policy">Ver Política de Privacidad (Art. 14 ter)</span>
+        </button>
+        <button data-action="open-cmp" class="inline-flex items-center gap-2 bg-white hover:bg-stone-50 text-slate-dark font-semibold py-3 px-5 rounded-lg text-sm border border-stone-sand transition-colors">
+          <span class="material-symbols-outlined text-[18px]">cookie</span>
+          <span data-i18n="footer_cookie_settings">Configuración de Cookies</span>
+        </button>
+      </div>
+
+      <!-- Ficha del Responsable del Tratamiento -->
+      <div class="bg-surface-container p-6 sm:p-8 rounded-2xl border border-stone-sand">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="space-y-2">
+            <span class="text-xs uppercase tracking-wider font-bold text-terracotta block" data-i18n="resp_title">Responsable del Tratamiento</span>
+            <h4 class="font-serif font-bold text-lg text-primary" data-i18n="resp_name">INGENIERÍA EN PROYECTOS DE OBRAS CIVILES SUSTENTABLES Y EDIFICACIÓN AO</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-xs text-slate-muted pt-1">
+              <p><strong class="text-slate-dark" data-i18n="resp_rut">RUT: 78.154.344-6</strong></p>
+              <p><strong class="text-slate-dark" data-i18n="resp_trade">Nombre Comercial: Construcciones AO</strong></p>
+              <p><span class="material-symbols-outlined text-[13px] align-middle text-forest-medium">mail</span> <span data-i18n="resp_email">Correo: construyeao@gmail.com</span></p>
+              <p><span class="material-symbols-outlined text-[13px] align-middle text-forest-medium">call</span> <span data-i18n="resp_phone">Teléfono: +56 9 7992 5812</span></p>
+            </div>
+            <p class="text-xs text-slate-muted pt-1">
+              <span class="material-symbols-outlined text-[13px] align-middle text-forest-medium">location_on</span>
+              <span data-i18n="resp_zones">Zona de Cobertura: San José de Maipo, Pirque, Puente Alto y La Florida, Región Metropolitana.</span>
+            </p>
+          </div>
+
+          <div class="shrink-0 p-4 bg-white rounded-xl border border-stone-sand text-center min-w-[220px]">
+            <span class="material-symbols-outlined text-3xl text-emerald-600 block mb-1">verified</span>
+            <span class="text-xs font-bold text-primary block">Modelo de Prevención</span>
+            <span class="text-[11px] text-slate-muted block">En proceso de certificación ante la Agencia de Protección de Datos</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECCIÓN: CONTACTO & FORMULARIO             -->
+  <!-- ========================================== -->
+  <section id="contacto" class="py-20 bg-canvas-cream border-t border-stone-sand">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-secondary text-xs uppercase tracking-widest font-bold block mb-2" data-i18n="nav_contact">Contacto</span>
+        <h2 class="font-serif text-3xl font-bold text-primary">Inicia tu Proyecto con Construcciones AO</h2>
+        <p class="text-slate-muted text-sm mt-2">Visitas técnicas en terreno en San José de Maipo, Pirque, Puente Alto y La Florida.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl border border-stone-sand shadow-sm space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-dark mb-1">Nombre Completo *</label>
+            <input type="text" id="contactName" required class="w-full bg-surface-container border border-stone-sand rounded-lg px-3 py-2 text-sm text-slate-dark focus:ring-2 focus:ring-forest-deep focus:outline-none" placeholder="Ej: Juan Pérez" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-dark mb-1">Teléfono / WhatsApp *</label>
+            <input type="tel" id="contactPhone" required class="w-full bg-surface-container border border-stone-sand rounded-lg px-3 py-2 text-sm text-slate-dark focus:ring-2 focus:ring-forest-deep focus:outline-none" placeholder="+56 9 1234 5678" />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-semibold text-slate-dark mb-1">Correo Electrónico *</label>
+            <input type="email" id="contactEmail" required class="w-full bg-surface-container border border-stone-sand rounded-lg px-3 py-2 text-sm text-slate-dark focus:ring-2 focus:ring-forest-deep focus:outline-none" placeholder="juan.perez@ejemplo.cl" />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-semibold text-slate-dark mb-1">Comuna o Sector de la Obra *</label>
+            <input type="text" id="contactLocation" required class="w-full bg-surface-container border border-stone-sand rounded-lg px-3 py-2 text-sm text-slate-dark focus:ring-2 focus:ring-forest-deep focus:outline-none" placeholder="Ej: San Alfonso, Cajón del Maipo" />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-semibold text-slate-dark mb-1">Mensaje o Detalle del Requerimiento *</label>
+            <textarea id="contactMessage" rows="3" required class="w-full bg-surface-container border border-stone-sand rounded-lg px-3 py-2 text-sm text-slate-dark focus:ring-2 focus:ring-forest-deep focus:outline-none" placeholder="Describe brevemente los m², tipo de obra y plazos deseados..."></textarea>
+          </div>
+        </div>
+
+        <!-- Consentimiento Desagregado Ley 21.719 (Sin premarcar) -->
+        <div class="p-4 bg-surface-container-low rounded-xl border border-stone-sand space-y-2 text-xs">
+          <label class="flex items-start gap-2 cursor-pointer">
+            <input type="checkbox" id="contactConsent" required class="mt-0.5 rounded border-stone-sand text-forest-deep focus:ring-forest-deep" />
+            <span class="text-slate-muted leading-tight">
+              Acepto el tratamiento de mis datos de contacto con la exclusiva finalidad de recibir la propuesta técnica y comercial de Construcciones AO, conforme a la <button type="button" data-action="open-privacy" class="text-terracotta underline font-semibold">Política de Privacidad (Ley 21.719)</button>.
+            </span>
+          </label>
+        </div>
+
+        <button type="button" onclick="window.open('https://wa.me/56979925812?text=Hola%20Construcciones%20AO%2C%20quiero%20coordinar%20una%20visita%20t%C3%A9cnica%20en%20terreno', '_blank')" class="w-full bg-primary hover:bg-primary-container text-white font-semibold py-3.5 px-6 rounded-lg text-sm shadow transition-colors flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined text-[18px]">send</span>
+          <span>Contactar a Nuestro Equipo Técnico</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- FOOTER                                     -->
+  <!-- ========================================== -->
+  <footer class="bg-primary text-white pt-16 pb-12 border-t border-primary-container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-white/10">
+        
+        <!-- Columna 1: Marca -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <img src="assets/img/logo.png" alt="Construcciones AO" class="h-10 w-auto bg-white p-1 rounded" />
+            <span class="font-serif font-bold text-lg">Construcciones AO</span>
+          </div>
+          <p class="text-xs text-stone-300 leading-relaxed">
+            INGENIERÍA EN PROYECTOS DE OBRAS CIVILES SUSTENTABLES Y EDIFICACIÓN AO.<br />
+            RUT: 78.154.344-6
+          </p>
+          <p class="text-xs text-stone-400">
+            Especialistas en refugios de cordillera, ampliaciones y obras civiles en la precordillera de Santiago.
+          </p>
+        </div>
+
+        <!-- Columna 2: Áreas de Cobertura -->
+        <div>
+          <h4 class="font-serif font-bold text-sm text-secondary-fixed mb-3" data-i18n="footer_coverage">Áreas de Cobertura</h4>
+          <ul class="text-xs text-stone-300 space-y-1.5">
+            <li>• San José de Maipo y Alrededores</li>
+            <li>• El Manzano, San Alfonso y Baños Morales</li>
+            <li>• Pirque y El Principal</li>
+            <li>• Puente Alto y La Florida (Precordillera)</li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Navegación Rápida -->
+        <div>
+          <h4 class="font-serif font-bold text-sm text-secondary-fixed mb-3" data-i18n="footer_quick_links">Navegación</h4>
+          <ul class="text-xs text-stone-300 space-y-1.5">
+            <li><a href="#servicios" class="hover:text-white transition-colors" data-i18n="nav_services">Servicios</a></li>
+            <li><a href="#metodologia" class="hover:text-white transition-colors" data-i18n="nav_process">Metodología</a></li>
+            <li><a href="#cotizador" class="hover:text-white transition-colors" data-i18n="nav_portfolio">Cotizador</a></li>
+            <li><button data-action="open-arco" class="hover:text-white transition-colors text-left" data-i18n="legal_btn_arco">Canal ARCO+ (Ley 21.719)</button></li>
+            <li><button data-action="open-privacy" class="hover:text-white transition-colors text-left" data-i18n="legal_btn_policy">Política de Privacidad</button></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Canales Directos -->
+        <div>
+          <h4 class="font-serif font-bold text-sm text-secondary-fixed mb-3" data-i18n="nav_contact">Contacto Directo</h4>
+          <div class="text-xs text-stone-300 space-y-2">
+            <p class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[16px] text-terracotta">call</span>
+              <span>+56 9 7992 5812</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[16px] text-terracotta">mail</span>
+              <span>construyeao@gmail.com</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[16px] text-terracotta">shield</span>
+              <span>DPD: construyeao@gmail.com</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra Inferior -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
+        <p data-i18n="footer_rights">© 2026 INGENIERÍA EN PROYECTOS DE OBRAS CIVILES SUSTENTABLES Y EDIFICACIÓN AO. Todos los derechos reservados.</p>
+        <div class="flex items-center gap-4">
+          <button data-action="open-cmp" class="hover:text-white flex items-center gap-1 transition-colors">
+            <span class="material-symbols-outlined text-[15px]">cookie</span>
+            <span data-i18n="footer_cookie_settings">Configuración de Cookies</span>
+          </button>
+          <span>·</span>
+          <button data-action="open-privacy" class="hover:text-white transition-colors" data-i18n="footer_legal_notice">Aviso Legal</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- CMP: BANNER FLOTANTE DE COOKIES (Ley 21.719) -->
+  <!-- ========================================== -->
+  <aside id="cmpBanner" aria-hidden="true" class="hidden fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md z-50 bg-white/95 backdrop-blur-md p-5 rounded-2xl border border-stone-sand shadow-2xl">
+    <div class="flex items-start gap-3 mb-3">
+      <span class="material-symbols-outlined text-terracotta text-2xl">cookie</span>
+      <div>
+        <h4 class="font-serif font-bold text-sm text-primary" data-i18n="cmp_banner_title">Respetamos su Privacidad (Ley 21.719)</h4>
+        <p class="text-xs text-slate-muted leading-relaxed mt-1" data-i18n="cmp_banner_text">
+          Utilizamos cookies esenciales para el funcionamiento de nuestro sitio. Las cookies analíticas solo se activan con su consentimiento afirmativo previo.
+        </p>
+      </div>
+    </div>
+    <div class="flex items-center justify-end gap-2 pt-2 border-t border-stone-100">
+      <button id="cmpBtnReject" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-dark hover:bg-stone-100 transition-colors" data-i18n="cmp_btn_reject">Rechazar Opcionales</button>
+      <button id="cmpBtnManage" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-muted hover:text-primary transition-colors underline" data-i18n="cmp_btn_manage">Configurar</button>
+      <button id="cmpBtnAccept" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-forest-deep text-white hover:bg-primary transition-colors shadow-sm" data-i18n="cmp_btn_accept">Aceptar Todas</button>
+    </div>
+  </aside>
+
+  <!-- ========================================== -->
+  <!-- CMP: MODAL DE CONFIGURACIÓN DE COOKIES     -->
+  <!-- ========================================== -->
+  <div id="cmpModal" aria-hidden="true" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-stone-sand max-h-[90vh] overflow-y-auto space-y-4">
+      <div class="flex items-center justify-between pb-3 border-b border-stone-sand">
+        <h3 class="font-serif font-bold text-lg text-primary flex items-center gap-2">
+          <span class="material-symbols-outlined text-terracotta">tune</span>
+          <span data-i18n="cmp_modal_title">Centro de Preferencias de Cookies</span>
+        </h3>
+        <button id="cmpBtnClose" class="text-stone-400 hover:text-stone-700">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <div class="space-y-4 text-xs">
+        <!-- Esenciales -->
+        <div class="p-3 bg-surface-container rounded-xl flex items-start justify-between gap-3">
+          <div>
+            <h5 class="font-bold text-primary" data-i18n="cmp_cat_essential">Cookies Técnicas (Necesarias)</h5>
+            <p class="text-slate-muted mt-0.5" data-i18n="cmp_cat_essential_desc">Garantizan la navegación, seguridad de sesión y funciones básicas. Siempre activas por mandato legal.</p>
+          </div>
+          <span class="text-[11px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded uppercase">Siempre Activas</span>
+        </div>
+
+        <!-- Analíticas -->
+        <div class="p-3 bg-surface-container-low rounded-xl flex items-start justify-between gap-3">
+          <div>
+            <h5 class="font-bold text-primary" data-i18n="cmp_cat_analytics">Cookies Analíticas</h5>
+            <p class="text-slate-muted mt-0.5" data-i18n="cmp_cat_analytics_desc">Nos permiten medir visitas y fuentes de tráfico para optimizar el rendimiento del portal web de manera anónima.</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="cmpCheckAnalytics" class="sr-only peer" />
+            <div class="w-9 h-5 bg-stone-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-forest-deep"></div>
+          </label>
+        </div>
+
+        <!-- Marketing -->
+        <div class="p-3 bg-surface-container-low rounded-xl flex items-start justify-between gap-3">
+          <div>
+            <h5 class="font-bold text-primary" data-i18n="cmp_cat_marketing">Cookies Publicitarias</h5>
+            <p class="text-slate-muted mt-0.5" data-i18n="cmp_cat_marketing_desc">Se utilizan para mostrar contenidos relevantes y ofertas de edificación de acuerdo a sus intereses.</p>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="cmpCheckMarketing" class="sr-only peer" />
+            <div class="w-9 h-5 bg-stone-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-forest-deep"></div>
+          </label>
+        </div>
+      </div>
+
+      <div class="pt-3 border-t border-stone-sand flex justify-end gap-2">
+        <button id="cmpBtnSave" class="w-full bg-forest-deep hover:bg-primary text-white font-semibold py-2.5 px-4 rounded-lg text-xs shadow transition-colors" data-i18n="cmp_btn_save">Guardar Preferencias</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: CANAL FORMAL DERECHOS ARCO+ (Ley 21.719)               -->
+  <!-- ============================================================== -->
+  <div id="arcoModal" aria-hidden="true" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-stone-sand max-h-[92vh] overflow-y-auto space-y-4">
+      
+      <div class="flex items-start justify-between pb-3 border-b border-stone-sand">
+        <div>
+          <h3 class="font-serif font-bold text-xl text-primary" data-i18n="arco_modal_title">Canal Formal de Ejercicio de Derechos ARCO+ (Ley 21.719)</h3>
+          <p class="text-xs text-slate-muted mt-1" data-i18n="arco_modal_subtitle">Usted tiene derecho a solicitar el control y resguardo de sus datos personales ante Construcciones AO.</p>
+        </div>
+        <button data-action="close-arco" class="text-stone-400 hover:text-stone-700">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <form id="arcoForm" class="space-y-4 text-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-semibold text-slate-dark mb-1" data-i18n="arco_field_name">Nombre Completo *</label>
+            <input type="text" id="arcoName" required class="w-full bg-surface-container border border-stone-sand rounded-lg px-3 py-2 text-slate-dark focus:ring-2 focus:ring-forest-deep focus:outline-none" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-dark mb-1" data-i18n="arco_field_rut">RUT / Documento de Identidad *</label>
+            <input type="text" id="arcoRut" required class="w-full bg-surface-container border border-stone-sand rounded-lg px-3 py-2 text-slate-dark focus:ring-2 focus:ring-forest-deep focus:outline-none" placeholder="12.345.678-9" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-dark mb-1" data-i18n="arco_field_email">Correo Electrónico de Contacto *</label>
+            <input type="email" id="arcoEmail" required class="w-full bg-surface-container border border-stone-sand rounded-lg px-3 py-2 text-slate-dark focus:ring-2 focus:ring-forest-deep focus:outline-none" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-dark mb-1" data-i18n="arco_field_phone">Teléfono</label>
+            <input type="tel" id="arcoPhone" class="w-full bg-surface-container border border-stone-sand rounded-lg px-3 py-2 text-slate-dark focus:ring-2 focus:ring-forest-deep focus:outline-none" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-dark mb-1" data-i18n="arco_field_type">Derecho a Ejercer *</label>
+          <select id="arcoRightType" class="w-full bg-surface-container border border-stone-sand rounded-lg px-3 py-2 text-slate-dark focus:ring-2 focus:ring-forest-deep focus:outline-none font-medium">
+            <option value="acceso" data-i18n="arco_opt_access">Acceso (Conocer qué datos se tratan)</option>
+            <option value="rectificacion" data-i18n="arco_opt_rectification">Rectificación (Corregir datos inexactos)</option>
+            <option value="cancelacion" data-i18n="arco_opt_cancellation">Cancelación (Suprimir mis datos)</option>
+            <option value="oposicion" data-i18n="arco_opt_opposition">Oposición (Oponerme a un tratamiento específico)</option>
+            <option value="portabilidad" data-i18n="arco_opt_portability">Portabilidad (Recibir datos en formato estructurado)</option>
+            <option value="bloqueo" data-i18n="arco_opt_blocking">Bloqueo Temporal Cautelar (Atención Prioritaria)</option>
+          </select>
+        </div>
+
+        <!-- Alertas de Plazo según SLA -->
+        <div id="arcoAlertStandard" class="p-3 bg-blue-50 border border-blue-200 text-blue-900 rounded-lg flex items-center gap-2">
+          <span class="material-symbols-outlined text-[18px] text-blue-700">schedule</span>
+          <span data-i18n="arco_alert_standard">Plazo legal de respuesta: Máximo 30 días hábiles conforme a la Ley 21.719.</span>
+        </div>
+
+        <div id="arcoAlertPriority" class="hidden p-3 bg-amber-50 border border-amber-300 text-amber-950 rounded-lg flex items-center gap-2 font-semibold">
+          <span class="material-symbols-outlined text-[20px] text-amber-700">timer</span>
+          <span data-i18n="arco_alert_priority">¡PROCEDIMIENTO PRIORITARIO!: Plazo perentorio de respuesta en un máximo de 2 días hábiles para bloqueo temporal.</span>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-dark mb-1" data-i18n="arco_field_details">Fundamentos y Detalle de la Solicitud *</label>
+          <textarea id="arcoDetails" rows="4" required class="w-full bg-surface-container border border-stone-sand rounded-lg px-3 py-2 text-slate-dark focus:ring-2 focus:ring-forest-deep focus:outline-none" placeholder="Indique con claridad los antecedentes o motivos de su requerimiento..."></textarea>
+        </div>
+
+        <label class="flex items-start gap-2 cursor-pointer p-3 bg-surface-container rounded-lg">
+          <input type="checkbox" required class="mt-0.5 rounded border-stone-sand text-forest-deep focus:ring-forest-deep" />
+          <span class="text-slate-muted leading-tight" data-i18n="arco_consent_text">
+            Declaro bajo fe de juramento que la información suministrada es verídica y consiento el tratamiento de estos antecedentes exclusivamente para la tramitación de esta solicitud.
+          </span>
+        </label>
+
+        <div class="pt-2 flex justify-end gap-2">
+          <button type="button" data-action="close-arco" class="px-4 py-2 rounded-lg text-slate-muted hover:bg-stone-100 transition-colors">Cancelar</button>
+          <button type="submit" class="bg-forest-deep hover:bg-primary text-white font-semibold py-2.5 px-6 rounded-lg shadow transition-colors" data-i18n="arco_btn_submit">Emitir Solicitud Formal</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: ACUSE DE RECIBO OFICIAL ARCO+                           -->
+  <!-- ============================================================== -->
+  <div id="arcoReceiptModal" aria-hidden="true" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-xl w-full p-8 shadow-2xl border-2 border-forest-deep space-y-4">
+      
+      <div class="text-center pb-4 border-b border-stone-sand space-y-1">
+        <span class="material-symbols-outlined text-4xl text-emerald-600 block">task_alt</span>
+        <h3 class="font-serif font-bold text-xl text-primary" data-i18n="arco_receipt_title">Acuse de Recibo Oficial - Solicitud ARCO+</h3>
+        <p class="text-xs text-slate-muted">Ley N° 21.719 sobre Protección de Datos Personales de Chile</p>
+      </div>
+
+      <div class="bg-surface-container p-4 rounded-xl text-xs space-y-2">
+        <div class="flex justify-between border-b border-stone-sand/60 pb-1">
+          <span class="text-slate-muted" data-i18n="arco_receipt_folio">Folio de Tramitación:</span>
+          <span id="receiptFolio" class="font-bold text-primary font-mono text-sm">AO-ARCO-XXXX</span>
+        </div>
+        <div class="flex justify-between border-b border-stone-sand/60 pb-1">
+          <span class="text-slate-muted">Titular Solicitante:</span>
+          <span id="receiptName" class="font-semibold text-slate-dark"></span>
+        </div>
+        <div class="flex justify-between border-b border-stone-sand/60 pb-1">
+          <span class="text-slate-muted">RUT / Identificación:</span>
+          <span id="receiptRut" class="font-semibold text-slate-dark"></span>
+        </div>
+        <div class="flex justify-between border-b border-stone-sand/60 pb-1">
+          <span class="text-slate-muted">Correo Notificación:</span>
+          <span id="receiptEmail" class="font-semibold text-slate-dark"></span>
+        </div>
+        <div class="flex justify-between border-b border-stone-sand/60 pb-1">
+          <span class="text-slate-muted">Derecho Requerido:</span>
+          <span id="receiptRight" class="font-semibold text-terracotta"></span>
+        </div>
+        <div class="flex justify-between border-b border-stone-sand/60 pb-1">
+          <span class="text-slate-muted">Fecha y Hora de Emisión:</span>
+          <span id="receiptDate" class="font-medium text-slate-dark"></span>
+        </div>
+        <div class="flex justify-between pt-1">
+          <span class="text-slate-muted" data-i18n="arco_receipt_deadline">Fecha Límite Legal de Respuesta:</span>
+          <span id="receiptDeadline" class="font-bold text-emerald-700"></span>
+        </div>
+      </div>
+
+      <div class="p-3 bg-stone-50 rounded-lg border border-stone-sand text-[11px] text-slate-muted space-y-1">
+        <p><strong data-i18n="arco_receipt_officer">Responsable Asignado: Delegado de Protección de Datos (DPD)</strong></p>
+        <p>Este comprobante certifica la recepción formal de su trámite. Se ha enviado una copia íntegra a su correo electrónico registrado.</p>
+      </div>
+
+      <div class="pt-2 flex justify-end gap-2">
+        <button id="arcoBtnPrint" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-semibold text-xs border border-stone-sand transition-colors" data-i18n="arco_receipt_btn_print">
+          <span class="material-symbols-outlined text-[16px]">print</span>
+          <span>Imprimir / Guardar Acuse PDF</span>
+        </button>
+        <button data-action="close-arco-receipt" class="bg-forest-deep hover:bg-primary text-white font-semibold py-2 px-5 rounded-lg text-xs transition-colors" data-i18n="arco_receipt_btn_close">Cerrar</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: POLÍTICA DE PRIVACIDAD ARTÍCULO 14 TER (Ley 21.719)     -->
+  <!-- ============================================================== -->
+  <div id="privacyModal" aria-hidden="true" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl border border-stone-sand max-h-[90vh] overflow-y-auto space-y-4">
+      
+      <div class="flex items-start justify-between pb-3 border-b border-stone-sand">
+        <div>
+          <h3 class="font-serif font-bold text-xl text-primary">Política de Privacidad y Tratamiento de Datos Personales</h3>
+          <p class="text-xs text-slate-muted mt-1">Conforme a las 12 exigencias del Artículo 14 ter de la Ley 21.719 (Chile)</p>
+        </div>
+        <button data-action="close-privacy" class="text-stone-400 hover:text-stone-700">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <div class="space-y-4 text-xs text-slate-muted leading-relaxed">
+        <section>
+          <h4 class="font-bold text-sm text-primary mb-1">1. Identidad del Responsable</h4>
+          <p>El responsable del tratamiento de los datos es <strong>INGENIERÍA EN PROYECTOS DE OBRAS CIVILES SUSTENTABLES Y EDIFICACIÓN AO</strong> (nombre comercial: <strong>Construcciones AO</strong>), RUT: 78.154.344-6, con domicilio operativo en Camino Al Volcán, Cajón del Maipo, Región Metropolitana de Chile. Correo de contacto: construyeao@gmail.com, teléfono: +56 9 7992 5812.</p>
+        </section>
+
+        <section>
+          <h4 class="font-bold text-sm text-primary mb-1">2. Delegado de Protección de Datos (DPD)</h4>
+          <p>Se ha designado un canal formal de gobernanza y contacto con el DPD a través del correo <strong>construyeao@gmail.com</strong>, disponible para canalizar cualquier consulta o requerimiento sobre el resguardo de información.</p>
+        </section>
+
+        <section>
+          <h4 class="font-bold text-sm text-primary mb-1">3. Finalidades del Tratamiento y Base de Licitud</h4>
+          <p>Los datos solicitados a través del cotizador y formularios de contacto (nombre, teléfono, correo electrónico, ubicación del proyecto) tienen como base de licitud el consentimiento explícito del titular y la ejecución de medidas precontractuales solicitadas por el mismo para la elaboración de propuestas técnicas de edificación.</p>
+        </section>
+
+        <section>
+          <h4 class="font-bold text-sm text-primary mb-1">4. Prohibición de Tratamiento de Datos Sensibles</h4>
+          <p>Construcciones AO no recopila datos sensibles, ni datos relativos a menores de edad (NNA), ni información crediticia directa en sus plataformas web públicas.</p>
+        </section>
+
+        <section>
+          <h4 class="font-bold text-sm text-primary mb-1">5. Derechos del Titular (ARCO+) y Plazos</h4>
+          <p>Usted puede ejercer en cualquier momento sus derechos de <strong>Acceso, Rectificación, Cancelación, Oposición, Portabilidad y Bloqueo Temporal</strong> a través del Canal ARCO+ disponible en esta web. El plazo ordinario de respuesta es de <strong>30 días hábiles</strong>, y de <strong>2 días hábiles</strong> en caso de solicitudes fundadas de bloqueo temporal cautelar.</p>
+        </section>
+
+        <section>
+          <h4 class="font-bold text-sm text-primary mb-1">6. Medidas de Seguridad y Transferencias</h4>
+          <p>La plataforma cuenta con cifrado TLS/HTTPS de última generación en el edge de Cloudflare, políticas de aislamiento y no cede ni comercializa antecedentes con terceros bajo ninguna circunstancia ajena al cumplimiento contractual.</p>
+        </section>
+      </div>
+
+      <div class="pt-3 border-t border-stone-sand flex justify-end">
+        <button data-action="close-privacy" class="bg-forest-deep hover:bg-primary text-white font-semibold py-2 px-6 rounded-lg text-xs transition-colors">Entendido</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Botón Flotante Permanente de Privacidad -->
+  <div class="fixed bottom-4 right-4 z-30">
+    <button data-action="open-cmp" class="flex items-center gap-2 bg-canvas-cream/95 backdrop-blur-md px-3.5 py-2 rounded-full border border-stone-sand shadow-lg text-slate-dark hover:bg-white hover:text-primary transition-all text-xs font-semibold" title="Abrir Preferencias de Privacidad">
+      <span class="material-symbols-outlined text-[18px] text-terracotta">shield</span>
+      <span class="hidden sm:inline" data-i18n="footer_cookie_settings">Preferencias de Privacidad</span>
+    </button>
+  </div>
+
+  <!-- Scripts Modulares -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
