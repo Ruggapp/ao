@@ -1,8 +1,8 @@
 # Temporary and extract folders
 extracted_upload/
 *.zip
-logo.png
-hero-bg.png
+/logo.png
+/hero-bg.png
 
 # OS / Editor files
 .DS_Store
