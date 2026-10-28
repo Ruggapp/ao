@@ -1,5 +1,5 @@
 /*
-  # Cloudflare Pages Security & Performance Headers
+  Content-Type: text/html; charset=utf-8
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
@@ -8,4 +8,8 @@
   Cache-Control: public, max-age=3600, must-revalidate
 
 /assets/*
+  Cache-Control: public, max-age=604800, immutable
+
+/assets/js/*
+  Content-Type: application/javascript; charset=utf-8
   Cache-Control: public, max-age=604800, immutable

@@ -19,9 +19,9 @@ export const translations = {
 
     // Hero
     hero_pill: "Construcción Sustentable · Cajón del Maipo · Pirque · Cordillera",
-    hero_title: "Constructora en Cajón del Maipo con",
-    hero_title_highlight: "calidad garantizada",
-    hero_subtitle: "Sueña en familia. Ampliaciones, remodelaciones y obra nueva con conciencia sustentable, respeto ecológico andino y terminaciones de autor preparadas para resistir generaciones.",
+    hero_title: "Constructora en Cajón del Maipo:",
+    hero_title_highlight: "edificación sustentable y obras civiles",
+    hero_subtitle: "Construcciones AO: constructora líder en Cajón del Maipo, Pirque y precordillera. Especialistas en edificación sustentable, cabañas alpinas, ampliaciones, remodelaciones y obras civiles con calidad garantizada y respeto ecológico andino.",
     hero_btn_quote: "Solicita tu Cotización",
     hero_btn_services: "Explorar Servicios",
 
@@ -184,9 +184,9 @@ export const translations = {
 
     // Hero
     hero_pill: "Construção Sustentável · Cajón del Maipo · Pirque · Cordilheira",
-    hero_title: "Construtora no Cajón del Maipo com",
-    hero_title_highlight: "qualidade garantida",
-    hero_subtitle: "Sonhe em família. Ampliações, reformas e novas obras com consciência sustentável, respeito ecológico andino e acabamentos nobres feitos para durar gerações.",
+    hero_title: "Construtora no Cajón del Maipo:",
+    hero_title_highlight: "edificação sustentável e obras civis",
+    hero_subtitle: "Construcciones AO: construtora no Cajón del Maipo, Pirque e região pré-cordilheira. Especialistas em edificação sustentável, chalés alpinos, reformas e obras civis com qualidade garantida e respeito ecológico andino.",
     hero_btn_quote: "Solicite seu Orçamento",
     hero_btn_services: "Conhecer Serviços",
 
@@ -349,9 +349,9 @@ export const translations = {
 
     // Hero
     hero_pill: "Sustainable Construction · Cajón del Maipo · Pirque · Andes Foothills",
-    hero_title: "Andean Building Contractor with",
-    hero_title_highlight: "guaranteed excellence",
-    hero_subtitle: "Build your dream retreat. Sustainable extensions, bespoke renovations, and architectural cabins engineered with Andean mountain durability to stand for generations.",
+    hero_title: "Building Contractor in Cajón del Maipo:",
+    hero_title_highlight: "sustainable construction & civil works",
+    hero_subtitle: "Construcciones AO: premier mountain building contractor in Cajón del Maipo, Pirque and foothills. Experts in sustainable construction, alpine cabins, renovations and civil works engineered for generations.",
     hero_btn_quote: "Request an Estimate",
     hero_btn_services: "Explore Services",
 
