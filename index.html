@@ -187,10 +187,15 @@
   <!-- ========================================== -->
   <!-- HERO SECTION                               -->
   <!-- ========================================== -->
-  <section class="relative bg-primary text-white overflow-hidden min-h-[640px] flex items-center">
-    <!-- Background Image -->
-    <div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay" style="background-image: url('assets/img/hero-bg.png');"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent"></div>
+  <section class="relative bg-slate-900 text-white overflow-hidden min-h-[680px] lg:min-h-[740px] flex items-center">
+    <!-- Background Image: Opacidad alta sin mix-blend forzado para apreciar la cabaña, río y montañas -->
+    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 scale-100" style="background-image: url('assets/img/hero-bg.png');"></div>
+
+    <!-- Scrim cinematográfico: Degradado suave y neutro desde la izquierda para garantizar legibilidad del texto sin teñir la foto de verde -->
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/60 to-black/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-black/30"></div>
+    <!-- Toque sutil cálido de atardecer cordillerano en la esquina superior -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(192,122,80,0.15),transparent_60%)]"></div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
       <div class="max-w-3xl space-y-6">
