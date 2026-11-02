@@ -8,3 +8,5 @@
 - [x] 6. Controlador UI principal y navegación (`assets/js/main.js`)
 - [x] 7. Documento HTML principal (`index.html`) con diseño Andean Organic Craft, logo oficial, secciones corporativas, cotizador, centro legal y modales
 - [x] 8. Validación funcional, pruebas de enlaces y verificación de compatibilidad con Cloudflare Pages
+- [x] 9. Optimización de visibilidad del logo en Header y Footer (dimensiones 512x186, h-10 md:h-12 lg:h-14 en header, h-12 en footer con contenedor claro, sr-only y verificación responsive en 375, 1024 y 1440 px)
+- [x] 10. Despliegue en Cloudflare Pages / Git y registro en DECISIONS.md
